@@ -1,0 +1,42 @@
+﻿@model AspNetCoreMVC_Front_Back_End_SQLServer.Models.Escola
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div class="container-fluid">
+    <h4>Escola</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_esc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_esc)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CNPJ)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CNPJ)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="List" class="btn btn-info">Voltar para Lista</a>
+    <a asp-action="Edit" class="btn btn-primary">Editar</a>
+</div>

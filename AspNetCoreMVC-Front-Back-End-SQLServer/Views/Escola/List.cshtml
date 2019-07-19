@@ -1,0 +1,52 @@
+﻿@model IEnumerable<AspNetCoreMVC_Front_Back_End_SQLServer.Models.Escola>
+@{
+    ViewData["List"] = "Escola";
+}
+@{
+    ViewBag.Title = "Lista de Escolas";
+}
+
+<p>
+    <p>
+        <h1 align="center">Lista de Escolas</h1>
+    </p>
+<p class="container" >
+    <a asp-action="Create"  class="btn btn-primary">+ Add Novo</a>
+</p>
+
+<div class="container">
+    <table id="minhaTabledeLista" class=" display table table-hove " style="background-color:black">
+        <thead class="">
+            <tr style="color:white">
+                <th>ID</th>
+                <th>Nome da Institução</th>
+                <th>CNPJ</th>
+                <th>Endereço</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @{ foreach (var item in Model)
+                {
+                <tr style="color:white">
+                    <td>@item.Id_esc</td>
+                    <td>@item.Nome</td>
+                    <td>@item.CNPJ</td>
+                    <td>@item.Endereco</td>
+                    <td>@Html.ActionLink("Editar", "Edit", new { id = item.Id_esc })</td>
+                    <td>@Html.ActionLink("Detalhes", "Details", new { id = item.Id_esc })</td>
+                    <td>@Html.ActionLink("Excluir", "Delete", new { id = item.Id_esc })</td>
+
+                </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#minhaTabledeLista').DataTable();
+    });
+</script>
+
+

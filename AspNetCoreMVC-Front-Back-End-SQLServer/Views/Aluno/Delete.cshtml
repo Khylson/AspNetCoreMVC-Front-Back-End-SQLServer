@@ -1,0 +1,62 @@
+﻿@model AspNetCoreMVC_Front_Back_End_SQLServer.Models.Aluno
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3 align="center">Voce quero Excluir?</h3>
+<div class="container-fluid">
+    <h4>Aluno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_aluno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_aluno)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobreome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sobreome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RG)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CPF)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CPF)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.E_mail)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.E_mail)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_esc)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id_esc)
+        </dd>
+    </dl>
+    <form asp-action="Delete">
+        <a asp-action="List" class="btn btn-info">Voltar na List</a>
+        <input type="submit" value="Excluir" class="btn btn-primary" />
+
+    </form>
+</div>

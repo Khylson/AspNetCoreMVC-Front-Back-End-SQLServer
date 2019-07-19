@@ -1,0 +1,42 @@
+﻿@model AspNetCoreMVC_Front_Back_End_SQLServer.Models.Escola
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<div class="container-fluid">
+    <h2 align="center">Folha de Editação de Escola</h2>
+    <hr />
+    <form asp-action="Edit" class="">
+        <div class="form-row">
+            <div asp-validation-summary="ModelOnly" class="text"></div>
+            <div class="col-md-4">
+                <label>ID</label>
+                <input asp-for="Id_esc" type="text" class="form-control is-valid" id="id_ecola" placeholder="ID" />
+            </div>
+            <div class="col-md-8">
+                <label>Nome</label>
+                <input asp-for="Nome" type="text" class="form-control is-valid" id="nome-escola" placeholder="Nome da Instituição" />
+                <span asp-validation-for="Nome" class="text"></span>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-8">
+                <label>CNPJ</label>
+                <input asp-for="CNPJ" type="text" class="form-control is-valid" id="cnpj_escola" placeholder="CNPJ" />
+                <span asp-validation-for="CNPJ" class="text-"></span>
+            </div>
+            <div class="col-md-4">
+                <label>Endereço</label>
+                <input asp-for="Endereco" type="text" class="form-control is-valid" id="endereco_escola" placeholder="Endereço" />
+                <span asp-validation-for="Endereco" class="text-"></span>
+                <p>
+                    <div class="form-group" align="right">
+                        <input type="submit" name="salvar" class="btn btn-success" value="Salvar">
+                    </div>
+            </div>
+        </div>
+    </form>
+    <div class="container">
+        <a asp-action="List" class="btn btn-info">Volta na List</a>
+    </div>
+</div>
